@@ -1,0 +1,96 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 37rem;;
+}
+
+#title_login{
+    width: 123%;
+    margin-right: -20rem;
+    position: relative;
+    left: 3rem;
+
+}
+
+figure{
+    padding-right: 2rem;
+    width: 70%;
+}
+
+.wrapper{
+    width: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 20px;
+    background-color: rgba(24, 24, 24, 0.795);
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px #aa6702;
+    
+    
+}
+
+
+
+#login[disabled]{
+    opacity: 0.7;
+}
+#login:hover{
+    background-color: #8b5606;
+    transition: 10ms;
+    font-family: system-ui;
+}
+
+#login{
+    width: 100px;
+    height: 5vh;
+    color: white;
+    /* margin: 15px; */
+    border: none;
+    border-radius: 10px;
+    background-color: #aa6702;
+    box-shadow: 0px 10px 20px -5px #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    left: 69px;
+}
+
+
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction:column ;
+    }
+    .left-login{
+        width: 90%;
+        height: auto;
+        margin: 5px 0px;
+    }
+
+    .right-login{
+        width: 90%;
+        height: auto;
+    }
+}
+

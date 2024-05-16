@@ -1,0 +1,109 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+    height: 95vh;
+    margin-left: 1.5rem;
+}
+
+h3{
+    padding-top: 1rem;
+    color: white;
+}
+
+p{
+    padding-top: 1rem;
+    color: white;
+    text-align: justify;
+}
+
+button{
+    width: 174px;
+    padding: 8px 0px;
+    margin: 5px;
+    border: none;
+    font-family: system-ui;
+    border-radius: 10px;
+    background-color: #aa6702;
+    box-shadow: 0px 10px 20px -5px #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: blanchedalmond;
+}
+
+.saida{
+    border: 2px solid green;
+
+}
+.bnt-home:hover{
+    background-color: #8b5606;
+    transition: 10ms;
+}
+
+
+.manuTop{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    border: 1px solid white;
+    width: 102.5%;
+}
+
+.manuTop > img{
+    width: 62px;
+    margin-left: 45%;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.menuTop:hover{
+    background-color: #8b5606;
+    transition: 10ms;
+}
+
+.caixaPrincipal{
+    border: 1px solid yellow;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    width: 106%;
+}
+
+.caixaEsquerda{
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    width: 70%;
+    margin: 1rem;
+}
+
+.caixaEsquerda > img{
+    width: 40%;
+}
+
+.caixaDireita{
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+    margin: 1rem;
+}
+
+.caixaDireita > img{
+    padding: 1rem;
+    width: 60%;
+}

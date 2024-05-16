@@ -1,0 +1,132 @@
+
+.caixa-principal{
+
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-registro{
+    width: 40%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.inter-registro{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 19px;
+    background-color:rgba(24, 24, 24, 0.712) ;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px  #aa6702;
+
+}
+
+
+.inter-registro > h1{
+    margin: 5px ;
+    font-family: system-ui;
+    box-sizing: border-box;
+}
+
+.textfield2 > input{
+    width: 100%;
+    font-family: system-ui;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:rgb(53, 52, 52) ;
+    outline: none;
+    box-shadow: 0px 10px 20px #0f0f0f;
+    box-sizing: border-box;
+    margin: 0px;
+    
+}
+
+.bnt-registro{
+    width: 23vh; 
+    padding: 8px 0px;
+    margin: 5px;
+    border: none;
+    font-family: system-ui;
+    border-radius: 10px;
+    background-color: #858585;
+    box-shadow: 0px 10px 20px -5px #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: blanchedalmond;
+    
+}
+.bnt-registro:hover{
+    background-color: #8b5606;
+    transition: 10ms;
+}
+
+.bnt-home{
+    width: 20vh; 
+    padding: 8px 0px;
+    margin: 5px;
+    border: none;
+    font-family: system-ui;
+    border-radius: 10px;
+    background-color: #aa6702;
+    box-shadow: 0px 10px 20px -5px #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: blanchedalmond;
+    
+}
+.bnt-home:hover{
+    background-color: #8b5606;
+    transition: 10ms;
+}
+
+@media only screen and (max-width: 950px){
+    .card-registro{
+        width: 40%;
+        
+        
+    }
+
+    .inter-registro{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px){
+    .caixa-principal{
+        flex-direction:column ;
+        width: 105%;
+        height: auto;
+
+    }
+    
+    .inter-registro{
+        width: 110%;
+        height: 66%;
+    }
+    .card-registro{
+        width: 60%;
+        height: 83%;
+    }
+    
+    
+}
