@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $hashed_password = $row["password"];
                        
                         
-                        print_r(password_verify($password, $hashed_password));
+                        
                         if(password_verify($password, $hashed_password)){
                             
                             // A senha está correta, então inicie uma nova sessão

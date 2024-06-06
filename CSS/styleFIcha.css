@@ -8,34 +8,46 @@
 .container{
 
     margin: auto;
-    width: 90%;
+    width: 95%;
 }
 
 .ficha{
     
-    border: 1px solid yellow;
-    width: 90%;
+    width: 95%;
     margin: auto;
     margin-top: 2rem;
     padding: 1rem;
-    background-color: bisque;
-    height: 80rem;
+    /*background-color: bisque;*/
+    background-image: url('/IMAGENS/fundo.png');
+    background-repeat: round;
+    
 }
 
 .ficha_top{
     margin: auto;
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
-.caixa_esquerda{
-    border: solid 2px red;
-    width: 40%;
-    height: 100px;
+.menu_esquerdo{
+    margin: auto;
+    padding-left: 30px;
 }
 
+.menu_direito{
+    margin: auto;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+.menu_direito select{
+    margin-right: 20px;
+}
 .caixa_direita{
-    border: solid 2px green;
+    display: flex;
+    flex-direction: row;
+   
     width: 100%;
     height: 100px;
 }
@@ -44,11 +56,13 @@
     margin: auto;
     display: flex;
     flex-direction: row;
+    width: 95%;
+    height: 90%;
 }
 
 
 .caixa_media_esquerda{
-    border: solid 2px rgb(45, 24, 139);
+   
     width: 40%;
     height: 1170px;
     display: flex;
@@ -59,12 +73,14 @@
     display: flex;
     flex-direction: column;
     width: 67%;
-    border: solid 2px rgb(24, 139, 24);
-    height: 1170px;
+
+    height: 1167px
 }
 
 .caixa_media_direita{
-    border: solid 2px rgb(45, 24, 139);
+    border-left: double;
+    border-right: double;
+    border-top: double;
     width: 100%;
     height: 35%;
     display: flex;
@@ -73,19 +89,68 @@
 }
 
 .caixa_int_esquerda{
-    border: solid 2px rgb(206, 203, 219);
+
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
+/*CAIXA SUPERIOR INTERNA DIREITA*/
 .caixa_int_direita{
     
-    border: solid 2px rgb(206, 203, 219);
+    border-left: double;
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    
 }
+
+.caixa_int_direita p{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.caixa_int_direita textarea{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    font-family:'MedievalSharp';
+    font-size: 15px;
+    padding: 10px;
+}
+
+.caixa_int_direita2{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.caixa_int_direita3{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.caixa_int_direita4{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.caixa_int_direita1{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+/*COLUNA DE ARMAS*/
+
+
+
 
 .ficha_baixo{
     display: flex;
@@ -94,7 +159,8 @@
 
 .ficha_top_int{
     width: 100%;
-    border: solid 2px rgb(139, 24, 110);
+    border-top: double;
+    border-left: double;
     height: 68%;
     display: flex;
     flex-direction: row;
@@ -102,24 +168,25 @@
 
 .ficha_bottom_int{
     width: 100%;
-    border: solid 2px rgb(139, 24, 110);
+    border-left: double;
+    border-bottom: double;
     height: 31%;
 }
 
 .ficha_baixa_direita{
     width: 33%;
-    border: solid 2px rgb(24, 139, 24);
+    
     height: 50;
 }
 
 .caixa_int_esquerda_baixo{
     width: 50%;
-    border: solid 2px rgb(139, 24, 62);
+ 
     height: 50%;
 }
 
 .ficha_tree{
-    width: 100%;
+    width: 101%;
     height: 50%;
     display: flex;
     flex-direction: row;
@@ -127,46 +194,97 @@
 
 .coluna_esquerda{
     width: 50%;
-    border: solid 2px rgb(139, 24, 133);
-    height: 128%;
+    height: 129%;
     display: flex;
     flex-direction: column;
 }
 
 .coluna_direita{
     width: 50%;
-    border: solid 2px rgb(24, 122, 139);
-    height: 127%;
+    height: 129%;
     display: flex;
     flex-direction: column;
 }
 
 .obj1{
     width: 100%;
-    border: solid 2px rgb(108, 139, 24);
-    height: 50%;
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+}
+
+.obj1 input{
+    width: 90%;
+    margin-top: 10px;
+}
+
+.contorno{
+
+    padding: 10px;
+    text-align: center;
+    height: 98%;
+    border: double;
 }
 
 .obj2{
     width: 100%;
-    border: solid 2px rgb(108, 139, 24);
-    height: 50%;
+
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
 }
+
+.obj2_esquerdo{
+    width: 25%;
+}
+
+.obj2_direito{
+    width: 70%;
+}
+.obj2_esquerdo input{
+    border-radius: 30%;
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+    border-width: thick;
+    text-align: center;
+    font-family:'MedievalSharp';font-size: 15px;
+}
+
+.obj2_direito input{
+    width: 100%;
+    height: 28px;
+    margin-top: 10px;
+    text-align: center;
+    font-family:'MedievalSharp';font-size: 15px;
+    border: transparent;
+    border-radius: 20px;
+}
+
 
 .cxs_esquerda{
     width: 50%;
-    border: solid 2px rgb(139, 24, 24);
+    border-right: double;
     height: 100%;
-    padding-top: 5px;
+    
 }
 
 .cxs_direita{
     width: 50%;
-    border: solid 2px rgb(139, 24, 24);
+
     height: 100%;
     display: flex;
-    padding: 5px;
+    padding-left: 5px;
     flex-direction: column;
+}
+
+.cxs_direita input{
+    text-align: center;
+    font-family: 'MedievalSharp';
+    font-size: 16px;
+    border: none;
+    width: 20%;
 }
 
 li{
@@ -222,6 +340,14 @@ li{
     border-radius: 5px;
 }
 
+#bonus_proeficiencia{
+    border: solid 1px;
+    width: 30%;
+    height: 20px;
+    border: none;
+    margin: 4px;
+    border-radius: 5px;
+}
 
 #shield_armor{
     display: flex;
@@ -231,11 +357,12 @@ li{
 }
 
 #shield_armor input{
-    width: 22px;
+    width: 50%;
     border: none;
-    margin: 1rem;
+    border-radius: 5px;
+    display: flex;
+    margin: auto;
     height: 40px;
-    border-radius: 5px
 }
 
 #shield_armor p {
@@ -332,6 +459,8 @@ li{
     width: 50%;
     margin-left: 1rem;
     height: 50px;
+    display: flex;
+    margin: auto;
 }
 
 #dados_vida p{
@@ -349,26 +478,14 @@ li{
 
 #teste_morte input{
     border: none;
-    width: 7px;
+    margin-top: 5px;
+    width: 10%;
 }
 
 #teste_morte p{
     font-family: 'MedievalSharp';font-size: 12px;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 button:hover{
@@ -398,6 +515,25 @@ button{
     display: flex;
     flex-direction: row;
     justify-content: end;
+}
+
+.talentos{
+    width: 100%;
+    height: 98%;
+    display: flex;
+    flex-direction: row;
+   
+    
+}
+
+
+.talentos textarea{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 95%;
+    border-radius: 25px;
+    border-width: thick;
 }
 
 

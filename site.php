@@ -16,6 +16,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -27,15 +28,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="./CSS/style1.css">
     <title>Home Page</title>
     <link rel="shortcut icon" type="imagex/png" href="./IMAGENS/Icone.site.png">
+    <link href='https://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styleSite.css">
 </head>
 
-<body
-    style="background-image: url(./IMAGENS/game-dungeons-and-dragons-hydra-tiamat-dungeons-and-dragons-wallpaper-preview.jpg);">
+<body style="background-image: url(./IMAGENS/game-dungeons-and-dragons-hydra-tiamat-dungeons-and-dragons-wallpaper-preview.jpg);">
     <div class="container">
 
         <div class="manuTop">
             <a href="ficha.php"><button>Nova Ficha</button>
-</a>
+            </a>
             <button>Editar Ficha</button>
             <button>Livros D&D PDF</button>
 
@@ -58,12 +60,35 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <button>Iniciar</button>
             </div>
             <div class="caixaDireita">
+                <div class="ficha_img">
 
+                    <?php
+                    $id = $_SESSION['id'];
+                    $query = $conn->query("SELECT id_usuario, nome_personagem,forca_personagem,constituicao_personagem, id_raca FROM ficha WHERE id_usuario='$id'");
+                    $registros = $query->fetchAll(PDO::FETCH_ASSOC);
+                    foreach ($registros as $option) {
+                    ?>
+                        <div class="esquerda">
+                            <textarea id="nome_personagem"> Nome: <?php echo $option['nome_personagem'] ?></textarea>
+                            <textarea id="forca">  Força: <?php echo $option['forca_personagem'] ?></textarea>
+                            <textarea id="constituicao">  Constituição: <?php echo $option['constituicao_personagem'] ?></textarea>
+                        </div>
+                        <div class="direita">
+                            <span id="p" value="<?php echo $option['id_raca'] ?>"></span>
+                            <canvas id="canvas" >
+
+                        </div>
+                        
+                    <?php
+                    }
+                    ?>
+                </di>
             </div>
         </div>
     </div>
 
-
+    <script src="/js/hexagon-chart.js"></script>
+    <script src="/js/img.js"></script>
 </body>
 
 </html>
