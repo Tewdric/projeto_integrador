@@ -1,5 +1,6 @@
 
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: 0;
@@ -9,9 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90vw;
-    height: 95vh;
-    margin-left: 1.5rem;
+    width: 100%;
+    height: 100%;
 }
 
 h3{
@@ -56,9 +56,9 @@ button{
     padding: 1rem;
     display: flex;
     flex-direction: row;
-    margin: 1rem;
+    margin: auto;
     border: 1px solid white;
-    width: 102.5%;
+
 }
 
 .manuTop > img{
@@ -73,14 +73,6 @@ button{
     transition: 10ms;
 }
 
-.caixaPrincipal{
-    border: 1px solid yellow;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 1rem;
-    width: 106%;
-}
 
 .caixaEsquerda{
     border: 1px solid orange;
@@ -88,22 +80,91 @@ button{
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-    width: 70%;
-    margin: 1rem;
+    width: 90%;
+    margin: auto;
 }
 
 .caixaEsquerda > img{
     width: 40%;
 }
 
+
 .caixaDireita{
     display: flex;
     justify-content: center;
     border: 1px solid red;
-    margin: 1rem;
+    margin: auto;
+    width: 95%;
+    margin: auto;
 }
 
-.caixaDireita > img{
-    padding: 1rem;
-    width: 60%;
+
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('/game-dungeons-and-dragons-hydra-tiamat-dungeons-and-dragons-wallpaper-preview.jpg');
+}
+
+
+
+
+.caixaPrincipal{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.ficha_img{
+    background-image: url('/IMAGENS/fundo.png');
+    background-repeat: round;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid greenyellow;
+    margin: auto;
+    
+}
+
+.att{
+    margin-left: 7rem;
+    margin-top: 5rem;
+    background: none;
+    border: none;
+    color:black;
+    font-family:'MedievalSharp';
+    font-size: 60px;
+    text-align:left;
+    width: 100%;
+    height: 50px;
+}
+
+.att_in{
+    background: none;
+    border: none;
+    color:black;
+    font-family:'MedievalSharp';
+    font-size: 60px;
+    
+    width: 100%;
+    height: 50px;
+}
+.ficha_img img{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+}
+
+
+.esquerda{
+    width: 100%;
+    border: 1px solid salmon;
+    display: flex;
+    flex-direction: column;
+    
 }

@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Prepare uma declaração selecionada
         $sql = "SELECT id FROM users WHERE username = :username";
 
-        if ($stmt = $pdo->prepare($sql)) {
+        if ($stmt = $conn->prepare($sql)) {
             // Vincule as variáveis à instrução preparada como parâmetros
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
 
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Prepare uma declaração de inserção
         $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
 
-        if ($stmt = $pdo->prepare($sql)) {
+        if ($stmt = $conn->prepare($sql)) {
             // Vincule as variáveis à instrução preparada como parâmetros
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Fechar conexão
-    unset($pdo);
+    unset($conn);
 }
 ?>
 

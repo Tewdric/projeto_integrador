@@ -1,5 +1,22 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('/game-dungeons-and-dragons-hydra-tiamat-dungeons-and-dragons-wallpaper-preview.jpg');
+}
+
 .caixaDireita{
-    width: 70%;
+    width: 90%;
+}
+
+.caixaEsquerda{
+    width: 90%;
+}
+
+.caixaPrincipal{
+    display: flex;
+    flex-direction: column;
 }
 
 .ficha_img{
@@ -9,35 +26,40 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+    border: 1px solid greenyellow;
+    margin: auto;
     
 }
 
 .ficha_img textarea{
+    margin-left: 7rem;
+    margin-top: 5rem;
     background: none;
     border: none;
     color:black;
     font-family:'MedievalSharp';
-    font-size: 25px;
+    font-size: 60px;
     text-align:left;
-    padding: 10px;
     width: 100%;
     height: 50px;
 }
 
 .ficha_img img{
     margin-top: 20px;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     margin-right: 10px;
 }
 
-.direita{
-    padding-top: 10px;
-    width: 50%;
-   
-}
 
 .esquerda{
-    width: 50%;
+    width: 100%;
+    border: 1px solid salmon;
     
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -1,42 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>Maturity Radar Demo</title>
+  </head>
+  <body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <input type="text" id="teste">
+    <div id="microservices"></div>
+    <script src="/js/radar.js"></script>
+    <script>
 
-<body>
-    <form action="" method="POST" style="display: flex; flex-direction: column; width: 50%;">
-        <label for="">Raça</label>
-        <select name="raca" id="raca">
-            <option>Selecionar</option>
-            <option value="1">Anão da montanha</option>
-            <option value="2">Anão da colina</option>
-        </select>
-        <label for="">Classe</label>  
-        <select name="classe" id="classe">
-            <option value="">Selecionar</option>
-            <option value="1">Guerreiro</option>
-            <option value="2">Barbaro</option>
-        </select>
-
-        <label for="forca">Força</label>
-        <input name="forca" id="forca">
-        <label for="forca">Constituição</label>
-        <input name="constituicao" id="constituicao">
-
-        <div class="alou" style="display: flex; flex-direction:row;" >
-        <input type="radio" name="atletismo" id="atletismo" ><input type="text" id="valor_atletismo">
-        <colgroup></colgroup>
-        </div>
-
-        
-        <button type="submit">enviar</button>
-    </form>
-
-    <script src="js/teste1.js"></script>
-</body>
-
+      let valor =parseInt(document.getElementById("teste").value = 10)
+      console.log(valor)
+      console.log(typeof(valor))
+      radar.show('#microservices', {
+        size: 700,
+        curve: false,
+        metrics: [
+          {
+            name: "Força",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+              
+            ],
+            target: 2,
+            actual: 2.5
+          },
+          {
+            name: "Constituição",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+            ],
+            target: 3,
+            actual: 2
+          },
+          {
+            name: "Destreza",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+            ],
+            target: 2,
+            actual: 0
+          },
+          {
+            name: "Sabedoria",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+            ],
+            target: 3,
+            actual: 2
+          },
+          {
+            name: "Carisma",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+            ],
+            target: 2,
+            actual: 1
+          }
+        ]
+      });
+    </script>
+  </body>
 </html>

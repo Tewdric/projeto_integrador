@@ -23,16 +23,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <html lang="en">
 
 <head>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js">     </script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style1.css">
     <title>Home Page</title>
     <link rel="shortcut icon" type="imagex/png" href="./IMAGENS/Icone.site.png">
     <link href='https://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet'>
-    <link rel="stylesheet" href="css/styleSite.css">
+    
 </head>
 
-<body style="background-image: url(./IMAGENS/game-dungeons-and-dragons-hydra-tiamat-dungeons-and-dragons-wallpaper-preview.jpg);">
+<body>
     <div class="container">
 
         <div class="manuTop">
@@ -69,26 +71,102 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     foreach ($registros as $option) {
                     ?>
                         <div class="esquerda">
-                            <textarea id="nome_personagem"> Nome: <?php echo $option['nome_personagem'] ?></textarea>
-                            <textarea id="forca">  Força: <?php echo $option['forca_personagem'] ?></textarea>
-                            <textarea id="constituicao">  Constituição: <?php echo $option['constituicao_personagem'] ?></textarea>
-                        </div>
-                        <div class="direita">
-                            <span id="p" value="<?php echo $option['id_raca'] ?>"></span>
-                            <canvas id="canvas" >
+                            
+                            <h1 class="att">Nome: <input class="att_in" id="nome_personagem" value="<?php echo $option['nome_personagem'] ?>"> </input></h1>
+                            <h1 class="att">Força: <input class="att_in" id="forca" value="<?php echo $option['forca_personagem'] ?>">  </input></h1> 
+                            <h1 class="att">Constituição: <input class="att_in" id="constituicao" value="<?php echo $option['constituicao_personagem'] ?>"></input></h1>
+                            <div id="microservices"></div>
+                            <div class="esquerda_baixo">
+                                
+                                
+                            </div>
+                            
 
                         </div>
+                        <div class="imagem">
+                                    <span id="p" value="<?php echo $option['id_raca'] ?>"></span>
+                                </div>
                         
                     <?php
                     }
                     ?>
-                </di>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="/js/hexagon-chart.js"></script>
     <script src="/js/img.js"></script>
+    <script src="/js/radar.js"></script>
+    <script>
+      
+      console.log(parseInt(document.getElementById("constituicao").value))
+      
+      var constituicao_att = parseInt(document.getElementById('constituicao').value)
+      console.log(constituicao_att)
+      radar.show('#microservices', {
+        size: 700,
+        curve: false,
+        metrics: [
+          {
+            name: "Força",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+              
+            ],
+            target: 2,
+            actual: 2.5
+          },
+          {
+            name: "Constituição",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+            ],
+            target: 3,
+            actual: constituicao_att/5
+          },
+          {
+            name: "Destreza",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+            ],
+            target: 2,
+            actual: 0
+          },
+          {
+            name: "Sabedoria",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+            ],
+            target: 3,
+            actual: 2
+          },
+          {
+            name: "Carisma",
+            range: [
+              "Value 0",
+              "Value 5",
+              "Value 10",
+              "Value 20"
+            ],
+            target: 2,
+            actual: 1
+          }
+        ]
+      });
+    </script>
 </body>
 
 </html>
