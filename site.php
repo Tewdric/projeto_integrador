@@ -66,15 +66,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                     <?php
                     $id = $_SESSION['id'];
-                    $query = $conn->query("SELECT id_usuario, nome_personagem,forca_personagem,constituicao_personagem, id_raca FROM ficha WHERE id_usuario='$id'");
+                    $query = $conn->query("SELECT id_usuario, nome_personagem,forca_personagem,destreza_personagem,constituicao_personagem,sabedoria_personagem, carisma_personagem,id_raca FROM ficha WHERE id_usuario='$id'");
                     $registros = $query->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($registros as $option) {
                     ?>
                         <div class="esquerda">
-                            
-                            <h1 class="att">Nome: <input class="att_in" id="nome_personagem" value="<?php echo $option['nome_personagem'] ?>"> </input></h1>
-                            <h1 class="att">Força: <input class="att_in" id="forca" value="<?php echo $option['forca_personagem'] ?>">  </input></h1> 
-                            <h1 class="att">Constituição: <input class="att_in" id="constituicao" value="<?php echo $option['constituicao_personagem'] ?>"></input></h1>
+                            <h5 class="att">Raça: <input class="att_in" id="id_raca" value="<?php echo $option['id_raca'] ?>"> </input></h5>
+                            <h5 class="att">Nome: <input class="att_in" id="nome_personagem" value="<?php echo $option['nome_personagem'] ?>"> </input></h5>
+                            <h5 class="att">Força: <input class="att_in" id="forca" value="<?php echo $option['forca_personagem'] ?>">  </input></h5> 
+                            <h5 class="att">Constituição: <input class="att_in" id="constituicao" value="<?php echo $option['constituicao_personagem'] ?>"></input></h5>
+                            <h5 class="att">Destreza: <input class="att_in" id="destreza" value="<?php echo $option['destreza_personagem'] ?>"></input></h5>
+                            <h5 class="att">Sabedoria: <input class="att_in" id="sabedoria" value="<?php echo $option['sabedoria_personagem'] ?>"></input></h5>
+                            <h5 class="att">Carisma: <input class="att_in" id="carisma" value="<?php echo $option['carisma_personagem'] ?>"></input></h5>
                             <div id="microservices"></div>
                             <div class="esquerda_baixo">
                                 
@@ -94,16 +97,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </div>
     </div>
-
-    <script src="/js/hexagon-chart.js"></script>
     <script src="/js/img.js"></script>
     <script src="/js/radar.js"></script>
     <script>
       
-      console.log(parseInt(document.getElementById("constituicao").value))
+      
       
       var constituicao_att = parseInt(document.getElementById('constituicao').value)
-      console.log(constituicao_att)
+      var forca_att = parseInt(document.getElementById('forca').value)
+      var destreza_att = parseInt(document.getElementById('destreza').value)
+      var sabedoria_att = parseInt(document.getElementById('sabedoria').value)
+      var carisma_att = parseInt(document.getElementById('carisma').value)
+      
       radar.show('#microservices', {
         size: 700,
         curve: false,
@@ -118,7 +123,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               
             ],
             target: 2,
-            actual: 2.5
+            actual: forca_att/5
           },
           {
             name: "Constituição",
@@ -140,7 +145,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               "Value 20"
             ],
             target: 2,
-            actual: 0
+            actual: destreza_att/5
           },
           {
             name: "Sabedoria",
@@ -151,7 +156,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               "Value 20"
             ],
             target: 3,
-            actual: 2
+            actual: sabedoria_att/5
           },
           {
             name: "Carisma",
@@ -162,11 +167,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               "Value 20"
             ],
             target: 2,
-            actual: 1
+            actual: carisma_att/5
           }
         ]
       });
     </script>
+
+
 </body>
 
 </html>
